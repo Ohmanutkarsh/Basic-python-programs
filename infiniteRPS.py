@@ -1,4 +1,4 @@
-import random,sys
+import random,sys,time
 
 wins = 0
 losses = 0
@@ -14,12 +14,12 @@ while True :
         sys.exit()
     if uMove == 'r' or uMove =='p' or uMove =='s':
         if uMove == 'r':
-            print('ROCK vs ___')
+            print('ROCK vs ...')
         elif uMove == 'p':
-            print('PAPER vs ___')
+            print('PAPER vs ...')
         elif uMove == 's':
-            print('SCISSORS vs ___')
-
+            print('SCISSORS vs ...')
+        time.sleep(0.7)
         ranNum = random.randint(1,3)
         if ranNum == 1:
             cMove = 'r'
@@ -30,7 +30,7 @@ while True :
         elif ranNum == 3:
             cMove = 's'
             print('SCISSORS')
-
+        time.sleep(0.7)
 
 
         if uMove == cMove :
@@ -54,6 +54,7 @@ while True :
         elif uMove == 's' and cMove == 'r':
             print('YOU LOSE!')
             losses = losses + 1
+        time.sleep(0.7)
     else :
         print('Type one of r, p, s or q')
 
